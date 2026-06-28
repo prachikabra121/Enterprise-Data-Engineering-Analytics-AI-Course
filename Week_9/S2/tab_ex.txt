@@ -1,0 +1,5 @@
+Emp_ID|Name|Department|Salary
+101|Anand|IT|85000
+102|Riya|HR|75000
+103|Kabir|IT|95000
+104|Sara|Finance|90000
