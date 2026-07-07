@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-06-29T08:12:44.154936+00:00",
+  "source_api": "http://localhost:5002/api/v1",
+  "fx_source": "https://open.er-api.com/v6/latest/USD",
+  "record_count": 5,
+  "data": [
+    {
+      "id": 2,
+      "name": "Mouse",
+      "price": 25.0,
+      "prices": {
+        "USD": 25.0,
+        "INR": 2362.25,
+        "EUR": 21.96,
+        "GBP": 18.94
+      },
+      "enriched_at": "2026-06-29T08:12:40.564109+00:00"
+    },
+    {
+      "id": 3,
+      "name": "Laptop Pro",
+      "price": 1499.0,
+      "prices": {
+        "USD": 1499.0,
+        "INR": 141640.8,
+        "EUR": 1316.49,
+        "GBP": 1135.78
+      },
+      "enriched_at": "2026-06-29T08:12:40.564109+00:00"
+    },
+    {
+      "id": 4,
+      "name": "Wireless Mouse",
+      "price": 39.99,
+      "prices": {
+        "USD": 39.99,
+        "INR": 3778.66,
+        "EUR": 35.12,
+        "GBP": 30.3
+      },
+      "enriched_at": "2026-06-29T08:12:40.564109+00:00"
+    },
+    {
+      "id": 5,
+      "name": "USB-C Hub",
+      "price": 55.0,
+      "prices": {
+        "USD": 55.0,
+        "INR": 5196.96,
+        "EUR": 48.3,
+        "GBP": 41.67
+      },
+      "enriched_at": "2026-06-29T08:12:40.564109+00:00"
+    },
+    {
+      "id": 6,
+      "name": "Mechanical Keyboard",
+      "price": 89.99,
+      "prices": {
+        "USD": 89.99,
+        "INR": 8503.17,
+        "EUR": 79.03,
+        "GBP": 68.18
+      },
+      "enriched_at": "2026-06-29T08:12:40.564109+00:00"
+    }
+  ]
+}
