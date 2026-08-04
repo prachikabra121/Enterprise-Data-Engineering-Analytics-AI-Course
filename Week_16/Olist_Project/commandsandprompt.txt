@@ -1,0 +1,81 @@
+1. Install the CLI (Windows)
+winget install Databricks.DatabricksCLI
+
+Then close and reopen the PyCharm terminal (so PATH refreshes) and verify:
+databricks version
+
+. Authenticate
+
+databricks auth login --host https://dbc-ea968130-07af.cloud.databricks.com
+databricks current-user me
+ databricks bundle deploy -t dev
+
+databricks bundle validate -t dev
+databricks bundle deploy -t dev
+databricks bundle run olist_medallion_pipeline -t dev
+
+
+prompt for architecture design:
+Here's a prompt you can paste into Miro AI (the "Create with AI" / diagram generator) to produce your medallion architecture diagram:
+
+---
+
+**Prompt:**
+
+Create a data engineering architecture diagram showing an end-to-end medallion (Lakehouse) pipeline, laid out left to right in five stages:
+
+1. **Source** — a Kaggle icon/box labeled "Olist Brazilian E-Commerce (9 CSV files)".
+2. **Landing** — a box labeled "Databricks Volume — Raw CSV files (/Volumes/…/olist_raw)".
+3. **Databricks Lakehouse (Unity Catalog)** — a large container holding three connected boxes in sequence:
+   - "BRONZE — Raw ingest, as-is + load metadata"
+   - "SILVER — Cleaned, typed, deduplicated, conformed; AI-enriched reviews (ai_analyze_sentiment, ai_classify)"
+   - "GOLD — Star schema (fact_sales, dim_product, dim_customer, dim_seller) + KPI aggregates"
+4. **Orchestration** — a box below the Lakehouse labeled "Databricks Job — Bronze → Silver → Gold tasks (Asset Bundle / YAML)" connected with a dotted line to the three layers.
+5. **Consumption** — a Power BI icon/box labeled "Power BI Dashboards — Revenue, On-time delivery %, Review sentiment".
+
+Connect each stage with arrows showing data flow left to right. Use a color gradient for the medallion layers: bronze/amber for Bronze, silver/grey for Silver, gold/yellow for Gold. Add a small side note near Silver reading "Delta Lake format — ACID, schema enforcement, time travel". Title the diagram "Olist E-Commerce — Medallion Lakehouse Architecture". Keep it clean, professional, and presentation-ready.
+
+Prompt for ERD design:
+Here's a prompt for Miro AI to generate the ER diagram:
+
+---
+
+**Prompt:**
+
+Create an entity-relationship diagram (ERD) for a Brazilian e-commerce database (Olist) with the following 8 entities. Show each as a table box listing its columns, mark primary keys with (PK) and foreign keys with (FK), and draw crow's-foot relationship lines between them.
+
+**customers** — customer_id (PK), customer_unique_id, customer_zip_prefix, customer_city, customer_state
+
+**sellers** — seller_id (PK), seller_zip_prefix, seller_city, seller_state
+
+**products** — product_id (PK), product_category, product_weight_g, product_length_cm, product_height_cm, product_width_cm
+
+**orders** — order_id (PK), customer_id (FK), order_status, order_purchase_ts, order_approved_ts, order_delivered_customer_ts, order_estimated_delivery_ts
+
+**order_items** — order_id (PK, FK), order_item_id (PK), product_id (FK), seller_id (FK), price, freight_value, shipping_limit_ts
+
+**order_payments** — order_id (PK, FK), payment_sequential (PK), payment_type, payment_installments, payment_value
+
+**order_reviews** — review_id (PK), order_id (PK, FK), review_score, review_comment_message, review_creation_ts
+
+**geolocation** — geolocation_zip_prefix, geolocation_lat, geolocation_lng, geolocation_city, geolocation_state (lookup table, no enforced key)
+
+Relationships (all one-to-many, crow's-foot on the "many" side):
+- customers (1) → orders (many)
+- orders (1) → order_items (many)
+- orders (1) → order_payments (many)
+- orders (1) → order_reviews (many)
+- products (1) → order_items (many)
+- sellers (1) → order_items (many)
+
+Place **orders** in the center as the hub, with customers to its left and order_items, order_payments, order_reviews branching to the right. Put products and sellers near order_items since they connect to it. Keep geolocation off to the side as a standalone lookup. Title the diagram "Olist E-Commerce — Entity Relationship Diagram". Use a clean, professional style with clearly labeled relationship lines.
+
+
+DimDate =
+ADDCOLUMNS(
+    CALENDAR(DATE(2016,1,1), DATE(2018,12,31)),
+    "Year", YEAR([Date]),
+    "MonthName", FORMAT([Date], "MMM YYYY"),
+    "MonthNum", YEAR([Date])*100 + MONTH([Date])
+)
+

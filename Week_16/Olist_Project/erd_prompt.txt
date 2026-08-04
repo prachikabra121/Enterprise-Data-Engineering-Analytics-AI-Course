@@ -1,0 +1,32 @@
+CREATE an entity-relationship diagram (ERD) for a Brazilian e-commerce dataset (Olist)
+with the following 8 entities. show each as a table box listing its column, mark primary keys with (PK)
+and foregn keys with (FK), and draw crow's-foot relationship lines between them.
+
+
+**customers** — customer_id (PK), customer_unique_id, customer_zip_prefix, customer_city, customer_state
+
+**sellers** — seller_id (PK), seller_zip_prefix, seller_city, seller_state
+
+**products** — product_id (PK), product_category, product_weight_g, product_length_cm, product_height_cm, product_width_cm
+
+**orders** — order_id (PK), customer_id (FK), order_status, order_purchase_ts, order_approved_ts, order_delivered_customer_ts, order_estimated_delivery_ts
+
+**order_items** — order_id (PK, FK), order_item_id (PK), product_id (FK), seller_id (FK), price, freight_value, shipping_limit_ts
+
+**order_payments** — order_id (PK, FK), payment_sequential (PK), payment_type, payment_installments, payment_value
+
+**order_reviews** — review_id (PK), order_id (PK, FK), review_score, review_comment_message, review_creation_ts
+
+**geolocation** — geolocation_zip_prefix, geolocation_lat, geolocation_lng, geolocation_city, geolocation_state (lookup table, no enforced key)
+
+Relationships (all one-to-many, crow's-foot on the "many" side):
+- customers (1) -> orders (many)
+- orders (1) -> order_items (many)
+- order (1) ->orders_payments (many)
+- order (1) -> order_reviews (many)
+- products (1) -> order_items (many)
+- sellers (1) -> order_items (many)
+
+Place **orders** in the center as the hub, with customers to its left and order_items,order_payments,order_reviews branching to the
+right.  Put products and sellers near order_items since they connect to it. Keep geolocation off to the side as a standalone lookup
+. Title the duagram as Olist Entity Realtionship Diagram . Use clean professional style with clkearly labled relationship lines . do not do any bluff

@@ -1,0 +1,43 @@
+store_id,store_name,city,state,store_format,floor_area_sqft,open_date
+ST001,UrbanCart Bengaluru Central,Bengaluru,Karnataka,Flagship,12196,2022-08-18
+ST002,UrbanCart Mumbai North,Mumbai,Maharashtra,High Street,15624,2019-04-08
+ST003,UrbanCart Delhi South,Delhi,Delhi,Flagship,4584,2021-11-15
+ST004,UrbanCart Hyderabad East,Hyderabad,Telangana,Flagship,17590,2020-03-10
+ST005,UrbanCart Chennai West,Chennai,Tamil Nadu,Express,13253,2022-07-03
+ST006,UrbanCart Pune Mall,Pune,Maharashtra,Express,3352,2020-01-22
+ST007,UrbanCart Kolkata Plaza,Kolkata,West Bengal,Express,9605,2019-06-10
+ST008,UrbanCart Ahmedabad Central,Ahmedabad,Gujarat,High Street,16769,2016-10-19
+ST009,UrbanCart Jaipur North,Jaipur,Rajasthan,Express,7960,2021-05-06
+ST010,UrbanCart Bengaluru South,Bengaluru,Karnataka,Express,8649,2020-05-17
+ST011,UrbanCart Mumbai East,Mumbai,Maharashtra,High Street,2747,2017-03-29
+ST012,UrbanCart Delhi West,Delhi,Delhi,High Street,2272,2023-10-02
+ST013,UrbanCart Hyderabad Mall,Hyderabad,Telangana,Express,5849,2023-02-27
+ST014,UrbanCart Chennai Plaza,Chennai,Tamil Nadu,High Street,13935,2016-08-17
+ST015,UrbanCart Pune Central,Pune,Maharashtra,Express,2341,2018-06-30
+ST016,UrbanCart Kolkata North,Kolkata,West Bengal,Express,16204,2019-05-24
+ST017,UrbanCart Ahmedabad South,Ahmedabad,Gujarat,Express,13966,2022-09-03
+ST018,UrbanCart Jaipur East,Jaipur,Rajasthan,Flagship,9040,2018-08-03
+ST019,UrbanCart Bengaluru West,Bengaluru,Karnataka,High Street,10382,2015-06-07
+ST020,UrbanCart Mumbai Mall,Mumbai,Maharashtra,Flagship,12675,2022-04-30
+ST021,UrbanCart Delhi Plaza,Delhi,Delhi,Express,7359,2022-05-05
+ST022,UrbanCart Hyderabad Central,Hyderabad,Telangana,Express,6673,2019-01-19
+ST023,UrbanCart Chennai North,Chennai,Tamil Nadu,Express,2482,2018-08-26
+ST024,UrbanCart Pune South,Pune,Maharashtra,High Street,4383,2022-11-04
+ST025,UrbanCart Kolkata East,Kolkata,West Bengal,High Street,12732,2016-04-12
+ST026,UrbanCart Ahmedabad West,Ahmedabad,Gujarat,High Street,5012,2018-04-03
+ST027,UrbanCart Jaipur Mall,Jaipur,Rajasthan,High Street,16997,2021-08-08
+ST028,UrbanCart Bengaluru Plaza,Bengaluru,Karnataka,High Street,15188,2016-08-01
+ST029,UrbanCart Mumbai Central,Mumbai,Maharashtra,High Street,2833,2021-11-25
+ST030,UrbanCart Delhi North,Delhi,Delhi,Flagship,15181,2022-07-27
+ST031,UrbanCart Hyderabad South,Hyderabad,Telangana,High Street,15340,2022-12-07
+ST032,UrbanCart Chennai East,Chennai,Tamil Nadu,High Street,6043,2023-11-08
+ST033,UrbanCart Pune West,Pune,Maharashtra,Flagship,11897,2021-09-22
+ST034,UrbanCart Kolkata Mall,Kolkata,West Bengal,Flagship,4558,2023-03-17
+ST035,UrbanCart Ahmedabad Plaza,Ahmedabad,Gujarat,Express,14586,2015-01-27
+ST036,UrbanCart Jaipur Central,Jaipur,Rajasthan,Express,12369,2022-09-10
+ST037,UrbanCart Bengaluru North,Bengaluru,Karnataka,High Street,5855,2021-12-13
+ST038,UrbanCart Mumbai South,Mumbai,Maharashtra,Express,8909,2020-06-23
+ST039,UrbanCart Delhi East,Delhi,Delhi,High Street,1826,2020-08-09
+ST040,UrbanCart Hyderabad West,Hyderabad,Telangana,Flagship,3124,2017-06-02
+ST041,UrbanCart Chennai Mall,Chennai,Tamil Nadu,High Street,12194,2021-08-03
+ST042,UrbanCart Pune Plaza,Pune,Maharashtra,High Street,10695,2023-06-06
